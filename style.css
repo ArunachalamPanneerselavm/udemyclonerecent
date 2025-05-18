@@ -51,6 +51,9 @@ body {
     gap: 10px;
     align-items: center;
 }
+.navbar__menubar{
+    display:none;
+}
 /* My Learning popup */
 .mylearning{
     position:relative;
@@ -140,7 +143,10 @@ display:none;
 }
 
 .recommended__course {
-    width: 400px;
+   flex-grow: 1;
+   flex-basis: 20%;
+   margin:5px;
+
 }
 
 .recommended__course img {
@@ -189,4 +195,26 @@ display:none;
     align-items: center;
     display:flex;
     justify-content: space-between;
+}
+/* Media Queries */
+@media screen and (max-width:800px)
+{
+    body{
+        font-size:10px;
+    }
+}
+@media screen and (max-width:600px)
+{
+    .recommended__course{
+        flex-basis:40%;
+    }
+    .categories{
+        display:none;
+    }
+    .navbar__icon,.navbar__search{
+        display:none;
+    }
+    .navbar__menubar{
+        display:block;
+    }
 }
